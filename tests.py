@@ -70,7 +70,7 @@ class TestCase(unittest.TestCase):
     # verifies if a American Express with invalid length returns False
     # Picked using Category Partition Testing
     def test10(self):
-        a = 3493575731247023
+        a = 3493575731247028
         self.assertFalse(credit_card_validator(a))
 
 
@@ -142,6 +142,15 @@ class TestCase(unittest.TestCase):
     def test19(self):
         a = 5093575731247050
         self.assertFalse(credit_card_validator(a))
+
+
+    # verifies if Mastercard with invalid prefix but proper checksum returns false
+    # Picked using Category Partition Testing
+    def test20(self):
+        a = 5093575731247050
+        b = 2781376497769182
+        self.assertFalse(credit_card_validator())
+        self.assertFalse(credit_card_validator(a,b))
 
 
     
