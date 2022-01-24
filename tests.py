@@ -200,5 +200,26 @@ class TestCase(unittest.TestCase):
         a = 355575731247056
         self.assertFalse(credit_card_validator(a))
 
+
+    # verifies if MasterCard with proper prefix and checksum but incorects length
+    # Picked using Category Partition Testing
+    def test28(self):
+        a = 513
+        self.assertFalse(credit_card_validator(a))
+
+
+    # verifies if Amex with proper prefix and checksum but incorects length
+    # Picked using Category Partition Testing
+    def test29(self):
+        a = 372
+        self.assertFalse(credit_card_validator(a))
+
+
+    # verifies if Amex with proper prefix and checksum but incorects length
+    # Picked using Category Partition Testing
+    def test30(self):
+        a = 363298457398478
+        self.assertFalse(credit_card_validator(a))
+
 if __name__ == '__main__':
     unittest.main()
