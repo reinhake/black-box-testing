@@ -88,10 +88,10 @@ class TestCase(unittest.TestCase):
         self.assertFalse(credit_card_validator(a))
 
 
-    # verifies if a American Express in the form of a string returns False
+    # verifies if a American Express with special characters returns false
     # Picked using Category Partition Testing
     def test12(self):
-        a = "349935224723012"
+        a = "349935224723%@!"
         self.assertFalse(credit_card_validator(a))
 
 
@@ -107,6 +107,13 @@ class TestCase(unittest.TestCase):
     def test14(self):
         a = 2221075184720507
         self.assertTrue(credit_card_validator(a))
+
+
+    # verifies if a visa with a decimal returns false
+    # Picked using Category Partition Testing
+    def test12(self):
+        a = 491682288.163365
+        self.assertFalse(credit_card_validator(a))
 
     
 
