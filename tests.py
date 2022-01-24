@@ -149,7 +149,6 @@ class TestCase(unittest.TestCase):
     def test20(self):
         a = 5093575731247050
         b = 2781376497769182
-        self.assertFalse(credit_card_validator())
         self.assertFalse(credit_card_validator(a,b))
 
 
