@@ -218,7 +218,7 @@ class TestCase(unittest.TestCase):
     # verifies if Amex with proper prefix and checksum but incorects length
     # Picked using Category Partition Testing
     def test30(self):
-        a = 250000000000000
+        a = 2500000000000001
         self.assertFalse(credit_card_validator(a))
 
 
