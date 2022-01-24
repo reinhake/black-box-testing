@@ -55,8 +55,15 @@ class TestCase(unittest.TestCase):
 
     # verifies if a card with invalid length returns False
     # Picked using Category Partition Testing
-    def test6(self):
+    def test8(self):
         a = 5574236704821512832
+        self.assertTrue(credit_card_validator(a))
+    
+
+    # verifies if a card with invalid length returns False
+    # Picked using Category Partition Testing
+    def test9(self):
+        a = 0
         self.assertTrue(credit_card_validator(a))
 
 
