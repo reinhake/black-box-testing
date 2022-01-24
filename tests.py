@@ -87,9 +87,29 @@ class TestCase(unittest.TestCase):
         a = 537207584445482
         self.assertFalse(credit_card_validator(a))
 
+
+    # verifies if a American Express in the form of a string returns False
+    # Picked using Category Partition Testing
+    def test12(self):
+        a = "349935224723012"
+        self.assertFalse(credit_card_validator(a))
+
+
+    # verifies if American Express with valid lengths and valid check bits returns True
+    # Picked using Category Partition Testing
+    def test13(self):
+        a = 379357573124705
+        self.assertTrue(credit_card_validator(a))
+
+
+    # verifies if MasterCard with valid lengths and valid check bits returns True
+    # Picked using Category Partition Testing
+    def test14(self):
+        a = 2221075184720507
+        self.assertTrue(credit_card_validator(a))
+
     
 
 
 if __name__ == '__main__':
     unittest.main()
-    
