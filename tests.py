@@ -65,6 +65,11 @@ class TestCase(unittest.TestCase):
     def test9(self):
         a = 42
         self.assertFalse(credit_card_validator(a))
+        self.assertFalse(credit_card_validator(513))
+        self.assertFalse(credit_card_validator(554))
+        self.assertFalse(credit_card_validator(349))
+        self.assertFalse(credit_card_validator(372))
+
 
 
     # verifies if a American Express with invalid length returns False
