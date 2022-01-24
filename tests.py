@@ -136,6 +136,13 @@ class TestCase(unittest.TestCase):
         a = 5593575731247055
         self.assertTrue(credit_card_validator(a))
 
+
+    # verifies if Mastercard with invalid prefix but proper checksum returns false
+    # Picked using Category Partition Testing
+    def test19(self):
+        a = 5093575731247050
+        self.assertfalse(credit_card_validator(a))
+
     
 
 
