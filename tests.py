@@ -94,10 +94,10 @@ class TestCase(unittest.TestCase):
         a = 2221075184720507
         self.assertTrue(credit_card_validator(a))
 
-    # verifies if a visa with a decimal returns false
+    # verifies if an Amex with a inproper check bit returns false
     # Picked using Category Partition Testing
     def test15(self):
-        a = 491682288.163365
+        a = 372423425352334
         self.assertFalse(credit_card_validator(a))
 
     # verifies if MasterCard with valid lengths and valid check bits returns True
