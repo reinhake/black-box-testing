@@ -49,14 +49,14 @@ class TestCase(unittest.TestCase):
     # verifies if a card with invalid starting bits but proper length and checksum returns False
     # Picked using Category Partition Testing
     def test7(self):
-        a = 007423670482535
+        a = 117423670482532
         self.assertFalse(credit_card_validator(a))
 
 
     # verifies if a card with invalid starting bits but proper length and checksum returns False
     # Picked using Category Partition Testing
     def test8(self):
-        a = 0074236704821512
+        a = 1174236704821519
         self.assertFalse(credit_card_validator(a))
     
 
