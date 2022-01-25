@@ -246,14 +246,14 @@ class TestCase(unittest.TestCase):
     # verifies if MasterCard with proper checksum,prefix, and length returns true
     # Picked using Category Partition Testing
     def test33(self):
-        a = 352092734829733
+        a = 322092734829730
         self.assertTrue(credit_card_validator(a))
 
 
     # verifies if MasterCard with proper checksum,prefix, and length returns true
     # Picked using Category Partition Testing
     def test34(self):
-        a = 362092734829731
+        a = 382092734829737
         self.assertTrue(credit_card_validator(a))
 
 if __name__ == '__main__':
