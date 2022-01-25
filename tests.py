@@ -238,21 +238,21 @@ class TestCase(unittest.TestCase):
 
     # verifies if Visa with proper prefix but incorrect checksum returns false
     # Picked using Category Partition Testing
-    def test32(self):
+    def test33(self):
         a = 272092734829732
         self.assertFalse(credit_card_validator(a))
 
 
     # verifies if MasterCard with proper checksum,prefix, and length returns true
     # Picked using Category Partition Testing
-    def test33(self):
+    def test34(self):
         a = 2222567890123454
-        self.assertFalse(credit_card_validator(a))
+        self.assertTrue(credit_card_validator(a))
 
 
     # verifies if MasterCard with proper checksum,prefix, and length returns true
     # Picked using Category Partition Testing
-    def test34(self):
+    def test35(self):
         a = 353456789012348
         self.assertFalse(credit_card_validator(a))
 
